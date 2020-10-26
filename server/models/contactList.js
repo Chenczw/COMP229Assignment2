@@ -7,7 +7,7 @@ let contactListModel = mongoose.Schema({
     email: String,
 },
 {
-    collection: "business_contact_list"
+    collection: "contactList"
 });
 
-module.exports = mongoose.model('Business_Contact_List', contactListModel);
+module.exports = mongoose.model('Contact_List', contactListModel);
