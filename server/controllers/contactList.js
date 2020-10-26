@@ -34,7 +34,7 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
     let newContact = Contact({
         "name": req.body.name,
-        "number": req.body.number,
+        "pNumber": req.body.pNumber,
         "email": req.body.email,
     });
 
@@ -81,7 +81,7 @@ module.exports.processEditPage = (req, res, next) => {
     let updateConcat = Contact({
         "_id": id,
         "name": req.body.name,
-        "number": req.body.number,
+        "pNumber": req.body.pNumber,
         "email": req.body.emial,
     });
 
