@@ -1,0 +1,47 @@
+<%- include ../partials/header.ejs%>
+
+<%- include ../partials/main_nav.ejs%>
+
+<!--  add contact page -->
+<main class="container">
+
+    <div class="jumbotron shadow-sm">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <h1 class="display-4 page-title text-center"><%= title %></h1>
+
+                <form class="form blockquote" method="POST">
+                    <div class="form-group">
+                        <label for="nameTextField">Name</label>
+                        <input type="text" class="form-control shadow-sm" id="nameTextField" placeholder="Enter the Name"
+                            name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberTextField">Contact Number </label>
+                        <input type="text" class="form-control shadow-sm" id="numberTextField"
+                            placeholder="Enter the contact number" name="number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publishedTextField">Email</label>
+                        <input type="text" class="form-control shadow-sm" id="emailTextField"
+                            placeholder="Enter the contact Email" name="email" required>
+                    </div>
+
+                    <button class="btn btn-outline-success" type="submit">
+                        <i class="fas fa-edit"></i> Create</button>
+
+                    <a href="/contact-list" class="btn btn-outline-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<%- include ../partials/bottom_nav.ejs%>
+
+<%- include ../partials/footer.ejs %>

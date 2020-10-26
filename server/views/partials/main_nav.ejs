@@ -1,0 +1,82 @@
+<!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <img src="/Assets/images/c.png" class="pr-3"/>
+    <a class="navbar-brand" href="/">COMP229 - Chen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <% if (title == "Home"){ %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+        </li>
+
+        <% if (title == "About Me") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/about-me"><i class="fas fa-address-card"></i></i> About Me </a>
+        </li>
+
+        <% if (title == "Project") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/project"><i class="fas fa-project-diagram"></i> Project </a>
+        </li>
+
+        <% if (title == "Services") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/services"><i class="fas fa-users"></i> Services </a>
+        </li>
+
+        <% if (title == "Business Contacts List") { %>
+          <li class="nav-item active">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/contact-list"><<i class="fas fa-address-book"></i>></i> Business Contacts List </a>
+        </li>
+
+        <% if (title == "Contact Me") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/contact-me"><i class="fas fa-mobile-alt"></i> Contact Me </a>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+
+          <li class="nav-item dropdown">
+  
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-lg fa-user"></i> Welcom, <%=displayName%>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="/logout" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a> 
+          
+          </li>
+  
+          <% } else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login </a>
+          </li>
+          <% } %>
+    </div>
+  </nav>

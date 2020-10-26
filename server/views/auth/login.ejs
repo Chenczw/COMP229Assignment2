@@ -1,0 +1,50 @@
+<%- include ../partials/header.ejs%>
+
+<%- include ../partials/main_nav.ejs%>
+
+<main class="container">
+
+    <div class="jumbotron shadow-sm screen-center">
+        <!-- message area -->
+        <% if(messages.length > 0) { %>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+        <% } %>
+
+
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <h1 class="display-4 page-title">Please Login</h1>
+                <br>
+                <form class="form blockquote" method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username" class="font-weight-bold">Username: </label>
+                        <input type="text" class="form-control shadow-sm" name="username" placeholder="Enter username"
+                            id="username" required autofocus>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="password" class="font-weight-bold">Password: </label>
+                        <input type="password" class="form-control shadow-sm" name="password" placeholder="Enter password"
+                            id="password" required autofocus>
+                        
+                    </fieldset>
+
+                    <fieldset class="form-group text-right ">
+                        <input type="submit" class="btn btn btn-outline-secondary btn-block login-margin" value="Login">
+                        <a href="/" class="no-effect">
+                            <input type="button" class="btn btn btn-outline-secondary btn-block login-margin no-effect" value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+<%- include ../partials/bottom_nav.ejs%>
+
+<%- include ../partials/footer.ejs%>

@@ -1,0 +1,35 @@
+/*
+app.css
+Chen Chen
+301082159
+25/10/2020
+*/
+
+
+/* body general fonts and color*/
+body {
+    font-family: 'Actor', sans-serif;
+    background-color:#e2dddd;
+}
+
+/** card img to 200px * 200px**/
+.service-card{
+    object-fit: cover;
+    object-position: 50% 0;
+  
+    width: 210px;
+    height: 200px;
+    padding-right: 20px;
+  }
+
+  /** card title to center**/
+  .card-title{
+    padding-top: 20px;
+
+  }
+
+  /*main body bg*/
+.jumbotron{
+  background-color: rgb(231, 240, 252);
+}
+  
